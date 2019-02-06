@@ -1,0 +1,15 @@
+.panel {
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */ }
+  .panel .content {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both; }
+  .panel .scene_element--fadein {
+    animation-name: fadeIn; }
+  .panel .scene_element--fadeinup {
+    animation-name: fadeInUp; }
+  .panel .scene_element--fadeinright {
+    animation-name: fadeInRight; }
+
+/*# sourceMappingURL=project03.css.map */

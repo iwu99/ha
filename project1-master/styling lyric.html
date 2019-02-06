@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <title>hyperballad</title>
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One|Notable|Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+<link rel="stylesheet" href="styling lyric.css">
+
+</head><link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+<body>
+
+<!--
+
+</div>
+-->
+
+
+<!--<img class=cup src="cup.jpg" alt="cup" width="100px" height="100px">-->
+
+<audio id="Audio">
+    <!-- replace horse.ogg/horse.mp3 with url to your sound file -->
+    <source src="hyperballad.mp3" type="audio/mpeg">
+
+  </audio>
+
+
+  <!-- playAudio() is the JavaScript function that tells the browser to play your audio file. The onclick attribute tells the browser to run the playAudio() function when a user clicks the html element with the onclick attribute -->
+  <button onclick="playAudio()" type="button">Play Audio</button>
+  <!-- similar to playAudio() function, except it pauses the audio -->
+  <button onclick="pauseAudio()" type="button" >Pause Audio</button>
+  <!-- onclick attribute works on other elements too, not just buttons. However, if it's a text element you wont see an arrow cursor. You can determine what type of arrow cursor shows up with the css cursor declaration -->
+  <script>
+  var audio = document.getElementById("Audio");
+     function playAudio() {
+       audio.play();
+     }
+     function pauseAudio() {
+       audio.pause();
+     }
+    </script>
+
+<div class="bottom">
+  ♥<br>
+
+
+</div>
+<div class="yo">
+  ♥<br>
+♥<br>
+
+</div>
+<div class="up">
+  ♥<br>
+  ♥<br>
+
+
+</div>
+<div class="left">
+  ♥<br>
+  ♥<br>
+  ♥<br>
+
+</div>
+<div class="right">
+  ♥<br>
+  ♥<br>
+  ♥<br>
+  ♥<br>
+  ♥ <br>
+</div>
+<div class="what">
+  ♥<br>
+
+</div>
+
+<div class="a">
+<h1 class="title">
+      H<br>YY__<br>PER___<br>BA_<br>LL<br>A<br>D
+</h1>
+</div>
+
+<div class="a">
+<ul class="b">
+We live on a mountain<br>
+Right               at the top</br>
+There's a beautiful view<br>
+From the top of the mountain</br>
+Every morning I walk towards the edge</br>
+And throw little things off</br>
+Like car-parts, bottles and cutlery</br>
+Or whatever I find lying around</br>
+It's become a habit</br>
+A way to start the day</br>
+I go through all this<br>
+Before you wake up<br>
+[So I can feel happier<br>
+To be safe up here with you<br>
+I go through all this<br>
+Before you wake up<br>
+So I can feel happier<br>
+To be safe up here with you<br>
+It's real early morning<br>
+No-one is awake<br>
+I'm back at my cliff<br>
+Still throwing things off<br>
+I listen to the sounds they make <br>
+on their way down<br>
+I follow with my eyes 'til they crash<br>
+Imagine what my body would sound like<br>
+Slamming against those rocks<br>
+When it lands<br>
+Will my eyes be closed or open?<br>
+I go through all this<br>
+Before you wake up<br>
+So I can feel happier<br>
+To be safe up here with you<br>
+I go through all this<br>
+Before you wake up<br>
+So I can feel happier<br>
+To be safe up here with you<br>
+I go through all this<br>
+Before you wake up<br>
+<b>So I can feel happier<br>
+To be safe up here with you<b>
+</p>
+
+</div>
+<script>
+$(document).ready(function(){
+    var CONSTANT_OFFSET = -200;
+    $(window).scroll(function(){
+       $('.a').css('margin-top', CONSTANT_OFFSET + $(this).scrollTop()*2 + 'px');
+    }).scroll();
+});
+</script>
+
+
+</body>
+</html>

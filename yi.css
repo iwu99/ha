@@ -1,0 +1,211 @@
+@media screen and (min-width: 700px){
+  .a1{
+    font-size: 50px;
+  }
+}
+body {
+
+  margin-top: 0vw;
+  margin-left:0vw;
+  margin-right: 0vw;
+    background-size: 4vw 4vw;
+    background-image: linear-gradient(to right, grey 1px, transparent 1px), linear-gradient(to bottom, grey 1px, transparent 1px);
+
+}
+.p1{
+  transform: translateX(-4.5vw);
+}
+.name{
+  display: grid;
+  position: absolute;
+  top:-8vw;
+  left: 16vw;
+  grid-template-columns: repeat(2, 8vw);
+  grid-template-rows: repeat(2,8vw);
+}
+.a1{
+font-size: 200px;
+  grid-row: 1/2;
+  grid-column:1/2;
+}
+.a2{
+  font-size:200px;
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.Name{
+  border: solid 2px black;
+
+  display: grid;
+  box-sizing: border-box;
+  position: absolute;
+  top: 28vw;
+  left:12vw;
+  width: 24vw;
+  height: 12vw;
+  padding-left: 2vw;
+  padding-top: 1vw;
+  background-color: #66CDAA;
+  opacity: 0.6;
+  text-align: start;
+grid-template-columns: repeat(2,10vw);
+grid-template-rows: 10vw;
+
+}
+
+.birth{
+    font-size: 2em;
+}
+.email{
+  font-size: 2em;
+}
+p{
+  font-family: 'Staatliches', cursive;
+
+}
+.Exercises{
+  display: inline;
+  font-size: 1em;
+  box-sizing: border-box;
+  position: absolute;
+  left: 80vw;
+  top:0vw;
+  height:20vw;
+  width:16vw;
+  background-color: black;
+
+}
+
+.Exercises p{
+  writing-mode: vertical-rl;
+text-orientation: upright;
+  font-size: 2em;
+padding-top: 1vw;
+padding-left: 14vw;
+}
+
+.Exercises:hover{
+  color: #FA8072;
+  background-color: #FA8072;
+}
+.projects{
+  display: inline;
+
+  box-sizing: border-box;
+  position: absolute;
+  height: 32vw;
+  width: 44vw;
+  top: 4vw;
+  left:36vw;
+  background-color: white;
+  border: solid 2px black;
+}
+.projects p{
+  padding-top: 15vw;
+  font-size: 7em;
+}
+
+.projects:hover{
+  background-color: black;
+  color: white;
+
+}
+.reading{
+
+  position: absolute;
+  top: 32vw;
+  left:64vw;
+  height:13.7vw;
+  width:19.6vw;
+
+
+    border: solid 4px black;
+}
+.reading p{
+padding-top: 5vw;
+  font-size: 2em;
+  text-align: center;
+  line-height: 0.5vw;
+}
+.reading:hover{
+  opacity: 0.6;
+  background-color: lightyellow;
+}
+a{
+  color: black;
+}
+.hover {
+  background-color:#4682B4;
+  background-size: 4vw 4vw;
+  background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+}
+.hover2 {
+  background-color:rgb(221,232,50);
+  background-size: 4vw 4vw;
+  background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+}
+.hover3 {
+  background-color:#FAF0E6;
+  background-size: 4vw 4vw;
+  background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
+}
+
+.project1{
+  display: inline;
+  box-sizing: border-box;
+  position: absolute;
+  top: 8vw;
+  left:8vw;
+  height: 24vw;
+  width: 32vw;
+  border: solid 2px black;
+  padding-top: 10vw;
+  font-family: 'Staatliches', cursive;
+  font-size:5em;
+}
+
+
+.project2{
+  display: inline;
+  box-sizing: border-box;
+  position: absolute;
+  top: 32vw;
+  left:72vw;
+  height: 24vw;
+  width: 32vw;
+  padding-top: 10vw;
+    border: solid 2px black;
+  font-family: 'Staatliches', cursive;
+  font-size:5em;
+}
+
+.project3{
+  display: inline;
+  box-sizing: border-box;
+  position: absolute;
+  top: 60vw;
+  left:16vw;
+  height: 24vw;
+  width: 32vw;
+  border: solid 2px black;
+  padding-top: 10vw;
+  font-family: 'Staatliches', cursive;
+    font-size:5em;
+}
+
+.back{
+  font-family: 'Staatliches', cursive;
+    font-size:5em;
+    display: inline;
+    box-sizing: border-box;
+    position: absolute;
+    top:4vw;
+    left: 80vw;
+}
+
+
+@media screen and (max-width: 992px) {
+  .a1{
+    font-size:150px;
+  }
+}

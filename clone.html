@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Projects</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|Staatliches" rel="stylesheet">
+  <link href="yi.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div onmouseover="foo();">
+
+  <a onmouseover="toggle_visibility('foo')" href="project1-master/styling lyric.html">
+<div class="project1">
+  Styling Lyric
+
+  </div>
+</a>
+
+
+<div id="foo" style="display:none;">
+
+  </div>
+
+<a id="foo" class="something" href="project2/project2.html">
+<div class="project2">
+Dedesign
+</div>
+</a>
+
+<div id="fooo" style="display:none;">
+
+  </div>
+
+<a href="project3/project3.html">
+<div class="project3">
+Record
+</div>
+</a>
+</div>
+
+<script>
+  $(function(){
+  $('.something').hover(function() {
+    $('body').addClass('hover');
+  }, function() {
+    $('body').removeClass('hover');
+  })
+})
+
+
+</script>
+</body>
+</html>

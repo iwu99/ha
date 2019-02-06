@@ -1,0 +1,43 @@
+body{
+
+margin:0;
+background-color: white;
+}
+.dreamcontent{
+    display: block;
+    padding-top: 200pt;
+    padding-left: 400pt;
+    padding-right: 400pt;
+}
+
+.dreamcontent h1{
+  font-family: 'Roboto Mono', serif;
+    font-weight:bold;
+}
+.dreamcontent p{
+font-family: 'Roboto Mono', serif;
+  line-height: 1em;
+  font-size: 2em;
+}
+
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+}
+
+.previous{
+  font-family: 'Roboto Mono', serif;
+  font-size: 2em;
+  box-sizing: border-box;
+  position: absolute;
+  left: 4vw;
+}
+.next{
+  font-family: 'Roboto Mono', serif;
+  font-size: 2em;
+  box-sizing: border-box;
+  position: absolute;
+  left: 90vw;
+}

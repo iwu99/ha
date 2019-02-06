@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox: overlay1 - Animsition</title>
+  <link rel="stylesheet" href="animate.min.css">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Major+Mono+Display|Roboto+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+  <link href="project3.css" media="screen" rel="stylesheet">
+  <link href="animsition-master/dist/css/animsition.min.css" rel="stylesheet">
+  <style media="screen">
+    .bg-init,
+    .animsition-overlay-slide {
+      background-color: #FAF0E6;
+    }
+  </style>
+
+  <script type="text/javascript" src="paperjs-v0.12.0/dist/paper-full.js"></script>
+  <script type="text/paperscript" canvas="canvas">
+      // Adapted from the following Processing example:
+      // http://processing.org/learning/topics/follow3.html
+
+      // The amount of points in the path:
+      var points = 25;
+
+      // The distance between the points:
+      var length = 1;
+
+      var path = new Path({
+          strokeColor: '  	#0000FF',
+          strokeWidth: 25,
+          strokeCap: 'round'
+      });
+
+      var start = view.center / [10, 1];
+      for (var i = 0; i < points; i++)
+          path.add(start + new Point(i * length, 0));
+
+      function onMouseMove(event) {
+          path.firstSegment.point = event.point;
+          for (var i = 0; i < points - 1; i++) {
+              var segment = path.segments[i];
+              var nextSegment = segment.next;
+              var vector = segment.point - nextSegment.point;
+              vector.length = length;
+              nextSegment.point = segment.point - vector;
+          }
+          path.smooth({ type: 'continuous' });
+      }
+
+      function onMouseDown(event) {
+          path.fullySelected = true;
+          path.strokeColor = '#e08285';
+      }
+
+      function onMouseUp(event) {
+          path.fullySelected = false;
+          path.strokeColor = '	#0000FF';
+      }
+  </script>
+</head>
+<body class="bg-init">
+
+  <div class="animsition-overlay" >
+
+
+
+  <canvas id="canvas" resize></canvas>
+<div id="wrap">
+
+  <div class="container">
+    <div class="title">
+    <a class="animsition-link" href="project3.html" data-animsition-out-class="overlay-slide-out-left"> 2019 Dream Calender </a>
+    </div>
+    <div class="month"><h2>1</h2>
+    </div>
+    <p class="black"> &nbsp</p>
+    <div class="week">
+
+        <div class="w7">Sun</div>
+      <div class="w1">Mon</div>
+      <div class="w2">Tue</div>
+      <div class="w3">Wed</div>
+      <div class="w4">Thu</div>
+      <div class="w5">Fri</div>
+      <div class="w6">Sat</div>
+      <div class="d0">/</div>
+      <div class="d0" >/</div>
+      <div class="d"><a class="animsition-link" href="page2.html" data-animsition-out-class="overlay-slide-out-right">1</a></div>
+      <div class="d" ><a class="animsition-link" href="jan2.html" data-animsition-out-class="overlay-slide-out-right">2</a></div>
+      <div class="d" ><a class="animsition-link" href="jan3.html" data-animsition-out-class="overlay-slide-out-right">3</a></div>
+      <div class="d" ><a class="animsition-link" href="jan.4.html" data-animsition-out-class="overlay-slide-out-right">4</a></div>
+      <div class="d" ><a class="animsition-link" href="jan5.html" data-animsition-out-class="overlay-slide-out-right">5</a></div>
+      <div class="d" ><a class="animsition-link" href="jan6.html" data-animsition-out-class="overlay-slide-out-right">6</a></div>
+      <div class="d" ><a class="animsition-link" href="jan7.html" data-animsition-out-class="overlay-slide-out-right">7</a></div>
+      <div class="d"><a class="animsition-link" href="jan8.html" data-animsition-out-class="overlay-slide-out-right">8</a></div>
+      <div class="d"><a class="animsition-link" href="jan9.html" data-animsition-out-class="overlay-slide-out-right">9</a></div>
+      <div class="d" ><a class="animsition-link" href="jan10.html" data-animsition-out-class="overlay-slide-out-right">10</a></div>
+      <div class="d" ><a class="animsition-link" href="jan11.html" data-animsition-out-class="overlay-slide-out-right">11</a></div>
+      <div class="d"><a class="animsition-link" href="jan12.html" data-animsition-out-class="overlay-slide-out-right">12</a></div>
+      <div class="d"><a class="animsition-link" href="jan13.html" data-animsition-out-class="overlay-slide-out-right">13</a></div>
+      <div class="d"><a class="animsition-link" href="jan14.html" data-animsition-out-class="overlay-slide-out-right">14</a></div>
+      <div class="d"><a class="animsition-link" href="jan15.html" data-animsition-out-class="overlay-slide-out-right">15</a></div>
+      <div class="d"><a class="animsition-link" href="jan16.html" data-animsition-out-class="overlay-slide-out-right">16</a></div>
+    <div class="d"><a class="animsition-link" href="jan17.html" data-animsition-out-class="overlay-slide-out-right">17</a></div>
+      <div class="d"><a class="animsition-link" href="jan18.html" data-animsition-out-class="overlay-slide-out-right">18</a></div>
+    <div class="d"><a class="animsition-link" href="jan19.html" data-animsition-out-class="overlay-slide-out-right">19</a></div>
+      <div class="d"><a class="animsition-link" href="jan20.html" data-animsition-out-class="overlay-slide-out-right">20</a></div>
+      <div class="d" ><a class="animsition-link" href="jan21.html" data-animsition-out-class="overlay-slide-out-right">21</a></div>
+      <div class="d"><a class="animsition-link" href="jan22.html" data-animsition-out-class="overlay-slide-out-right">22</a></div>
+      <div class="d"><a class="animsition-link" href="jan23.html" data-animsition-out-class="overlay-slide-out-right">23</a></div>
+      <div class="d"><a class="animsition-link" href="jan24.html" data-animsition-out-class="overlay-slide-out-right">24</a></div>
+      <div class="d"><a class="animsition-link" href="jan25.html" data-animsition-out-class="overlay-slide-out-right">25</a></div>
+      <div class="d"><a class="animsition-link" href="jan26.html" data-animsition-out-class="overlay-slide-out-right">26</a></div>
+    <div class="d"><a class="animsition-link" href="jan27.html" data-animsition-out-class="overlay-slide-out-right">27</a></div>
+      <div class="d"><a class="animsition-link" href="jan28.html" data-animsition-out-class="overlay-slide-out-right">28</a></div>
+    <div class="d"><a class="animsition-link" href="jan29.html" data-animsition-out-class="overlay-slide-out-right">29</a></div>
+      <div class="d"><a class="animsition-link" href="jan30.html" data-animsition-out-class="overlay-slide-out-right">30</a></div>
+    <div class="d"><a class="animsition-link" href="jan31.html" data-animsition-out-class="overlay-slide-out-right">31</a></div>
+      <div class="d0">/</div>
+      <div class="d0">/</div>
+    </div>
+
+    <div class="year">
+    <a class="jan" href="project3.html"> Jan </a>
+        <a href="page2.html"> Feb </a>
+      <a>Mar </a>
+      <a>May </a>
+      <a>Jun </a>
+      <a> Jul </a>
+      <a> Aug </a>
+      <a> Sep</a>
+      <a> Oct</a>
+      <a> Nov</a>
+      <a> Dec</a>
+    </div>
+  </div>
+
+
+</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="animsition-master/dist/js/animsition.min.js" charset="utf-8"></script>
+<script>
+$(document).ready(function() {
+  $('.animsition-overlay').animsition({
+    inClass: 'overlay-slide-in-top',
+    outClass: 'overlay-slide-out-top',
+    overlay : true,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body'
+  })
+  .one('animsition.inStart',function(){
+
+    $('body').removeClass('bg-init');
+
+    $(this)
+      .find('.item')
+      .append('<h2 class="target">Callback: Start</h2>');
+
+    console.log('event -> inStart');
+  })
+  .one('animsition.inEnd',function(){
+    $('.target', this).html('Callback: End');
+
+    console.log('event -> inEnd');
+  });
+});
+</script>
+
+</body>
+</html>

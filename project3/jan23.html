@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jan.23</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="day.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Major+Mono+Display|Roboto+Mono|poppins|ZCOOL+KuaiLe" rel="stylesheet">
+  <link href="animsition-master/dist/css/animsition.min.css" rel="stylesheet">
+
+  <style media="screen">
+    body{
+      margin:0;
+    }
+    .bg-init,
+    .animsition-overlay-slide {
+      background-color:	#FAF0E6;
+    }
+  </style>
+  <script type="text/javascript" src="paperjs-v0.12.0/dist/paper-full.js"></script>
+  <script type="text/paperscript" canvas="canvas">
+      // Adapted from the following Processing example:
+      // http://processing.org/learning/topics/follow3.html
+
+      // The amount of points in the path:
+      var points = 25;
+
+      // The dstance between the points:
+      var length = 92;
+
+      var path = new Path({
+          strokeColor: '#990000',
+          strokeWidth: 16,
+          strokeCap: 'round'
+      });
+
+      var start = view.center / [10, 1];
+      for (var i = 0; i < points; i++)
+          path.add(start + new Point(i * length, 0));
+
+      function onMouseMove(event) {
+          path.firstSegment.point = event.point;
+          for (var i = 0; i < points - 1; i++) {
+              var segment = path.segments[i];
+              var nextSegment = segment.next;
+              var vector = segment.point - nextSegment.point;
+              vector.length = length;
+              nextSegment.point = segment.point - vector;
+          }
+          path.smooth({ type: 'continuous' });
+      }
+
+      function onMouseDown(event) {
+          path.fullySelected = true;
+          path.strokeColor = '#e08285';
+      }
+
+      function onMouseUp(event) {
+          path.fullySelected = false;
+          path.strokeColor = '#990000';
+      }
+  </script>
+</head>
+<body class="bg-init">
+
+  <div class="animsition-overlay">
+
+  <canvas id="canvas" resize></canvas>
+  <a href="jan22.html"><div class="previous">Previous</div></a>
+    <a href="jan24.html"><div class="next">Next</div></a>
+<div class="dreamcontent">
+      <h1>Jan.23.2019</h1>
+
+      <p>
+      Forgot as soon as I woke up.........
+      </p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="animsition-master/dist/js/animsition.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function() {
+    $('.animsition-overlay').animsition({
+      inClass: 'overlay-slide-in-bottom',
+      outClass: 'overlay-slide-out-top',
+      overlay : true,
+      overlayClass : 'animsition-overlay-slide',
+      overlayParentElement : 'body'
+    })
+    .one('animsition.inStart',function(){
+
+      $('body').removeClass('bg-init');
+
+      $(this)
+        .find('.item')
+        .append('<h2 class="target">Callback: Start</h2>');
+
+      console.log('event -> inStart');
+    })
+    .one('animsition.inEnd',function(){
+      $('.target', this).html('Callback: End');
+      console.log('event -> inEnd');
+    })
+    .one('animsition.outStart',function(){
+      console.log('event -> outStart');
+    })
+    .one('animsition.outEnd',function(){
+      $('.target', this).html('Callback: End');
+      console.log('event -> outEnd');
+    });
+
+  });
+  </script>
+
+</body>
+</html>
